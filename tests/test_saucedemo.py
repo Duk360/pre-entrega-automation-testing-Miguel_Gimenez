@@ -16,9 +16,9 @@ def driver():
     yield driver
     driver.quit()
 
-# -------------------------------------------------------------
+#______________________________________________________________
 # CASO DE PRUEBA 1: Automatización de Login
-# -------------------------------------------------------------
+
 def test_login_exitoso(driver):
     iniciar_sesion(driver)
     
@@ -32,9 +32,9 @@ def test_login_exitoso(driver):
     ).text
     assert "Swag Labs" in logo
 
-# -------------------------------------------------------------
+# _____________________________________________________________
 # CASO DE PRUEBA 2: Navegación y verificación del catálogo
-# -------------------------------------------------------------
+
 def test_verificacion_catalogo(driver):
     iniciar_sesion(driver)
     
@@ -57,9 +57,9 @@ def test_verificacion_catalogo(driver):
     menu_btn = driver.find_element(By.ID, "react-burger-menu-btn")
     assert menu_btn.is_displayed()
 
-# -------------------------------------------------------------
+# _____________________________________________________________
 # CASO DE PRUEBA 3: Interacción con el carrito
-# -------------------------------------------------------------
+
 def test_interaccion_carrito(driver):
     iniciar_sesion(driver)
     
